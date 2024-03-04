@@ -1,0 +1,15 @@
+pluginManagement {
+    repositories {
+        maven { url resolveRepoUrl }
+        gradlePluginPortal()
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == 'governance-as-code') {
+                useModule("com.swedbank.andromeda.spacetime:gradle-governance-as-code:0.3.3")
+            }
+        }
+    }
+}
+
+rootProject.name = 'conventional-guidelines-api'

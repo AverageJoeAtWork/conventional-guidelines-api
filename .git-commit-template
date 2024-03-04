@@ -1,0 +1,46 @@
+# The Pipeline expects commit messages in the format:
+#
+#    <tag>(<jira-ticket>): <message>
+#
+# Example:
+#    fix(CORES-000): Fix bugs in function XYZ
+#
+# |<---- Try To Limit Each Line to a Maximum Of 72 Characters ---->|
+
+# ---- COMMIT END ----
+# <tag> can be:
+#    feat     (new feature)
+#    fix      (bug fix)
+#    build    ()
+#    chore    ()
+#    docs     (changes to documentation)
+#    perf     ()
+#    refactor (refactoring code)
+#    revert   (reverting to a previous state)
+#    style    (formatting, missing semi colons, etc; no code change)
+#    test     (adding or refactoring tests; no production code change)
+#    ci       ()
+#
+# --------------------
+# <jira-ticket> can be:
+#
+#    <Group id>-<Ticket number>
+#
+#    If the jira ticket is a correct ticket, Bitbucket will connect the commit to the jira task.
+#
+# --------------------
+# <message> can be:
+#
+#    Any message explaining the reason for the commit.
+#    If the message begins with "BREAKING CHANGE:" it will signal to the pipeline to increase the major version of the app.
+# Example:
+#    feat(CORES-000): BREAKING CHANGE: Remove function XYZ
+#
+# --------------------
+# Remember to:
+#   * Capitalize the subject line
+#   * Use the imperative mood in the subject line
+#   * Do not end the subject line with a period
+#   * Separate subject from body with a blank line
+#   * Use the body to explain what and why vs. how
+# --------------------
